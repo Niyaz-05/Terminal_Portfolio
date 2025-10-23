@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --terminal-bg: #0b0f12;
+  --terminal-green: #00ff99;
+  --terminal-cyan: #7de3f7;
+  --terminal-yellow: #e7e247;
+  --panel-glass: rgba(255,255,255,0.06);
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply bg-[#090d10] text-white font-mono;
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(57,255,20,0.08), transparent 50%),
+              radial-gradient(1000px 700px at 90% 110%, rgba(125,227,247,0.08), transparent 50%),
+              linear-gradient(180deg, #070a0c 0%, #0a0f13 100%);
+}
+
+.neon .neon-glow {
+  box-shadow: 0 0 18px rgba(57,255,20,.6), 0 0 50px rgba(57,255,20,.25);
+}
+
+/**** Utility ****/
+.scroll-smooth {
+  scroll-behavior: smooth;
+}

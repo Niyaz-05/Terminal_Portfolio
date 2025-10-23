@@ -1,0 +1,26 @@
+/* Terminal-specific styles */
+
+/* Scrollbar */
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(57,255,20,.25), rgba(125,227,247,.25));
+  border-radius: 999px;
+}
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Blinking caret example (if you want a custom cursor span) */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: '▊';
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--terminal-green);
+  animation: blink 1s step-start infinite;
+}
